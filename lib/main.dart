@@ -1,3 +1,4 @@
+import 'package:cash_collector/pages/client_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -21,10 +22,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Cash Collector',
-      home: Scaffold(
-        body: Container(child: Center(child: Text("CashCollector"))),
-      ),
+      home: ClientList(),
     );
   }
 }
