@@ -1,9 +1,12 @@
 import 'package:cash_collector/pages/client_list.dart';
+import 'package:cash_collector/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:here_sdk/core.dart';
 
 void main() {
   // make the top app transparent
+  SdkContext.init(IsolateOrigin.main);
   SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
@@ -24,7 +27,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Cash Collector',
-      home: ClientList(),
+      home: Home(),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:cash_collector/components/client_list_item.dart';
+import 'package:cash_collector/helpers/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -55,7 +56,8 @@ class _ClientListState extends State<ClientList> {
         leading: IconButton(
           icon: const Icon(
             Icons.keyboard_arrow_left,
-            color: Color(0xFF0759D4),
+            color: principalColor,
+            size: 30,
           ),
           onPressed: () {},
         ),
@@ -66,13 +68,13 @@ class _ClientListState extends State<ClientList> {
           style: TextStyle(
               fontFamily: 'Poppins Regular',
               fontSize: 18,
-              color: Color(0xFF0759D4)
+              color: principalColor
           ),
         ),
         actions: [
           Container(
-            height: 43,
-            width: 43,
+            height: 36,
+            width: 36,
             decoration: const BoxDecoration(
               color: Colors.white,
               shape: BoxShape.circle,
@@ -87,7 +89,7 @@ class _ClientListState extends State<ClientList> {
             child: const Icon(
               Icons.map,
               color: Color(0xFFBEBEBE),
-              size: 30,
+              size: 24,
             ),
           )
         ],

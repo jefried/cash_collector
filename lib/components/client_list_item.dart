@@ -1,3 +1,4 @@
+import 'package:cash_collector/helpers/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +24,7 @@ class ClientsListItem extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
       margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       width: double.infinity,
-      height: 120,
+      height: 108,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(9),
@@ -39,8 +40,8 @@ class ClientsListItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            height: 70,
-            width: 70,
+            height: 60,
+            width: 60,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               image: DecorationImage(
@@ -57,8 +58,8 @@ class ClientsListItem extends StatelessWidget {
                 name,
                 style: const TextStyle(
                   fontFamily: 'Poppins Medium',
-                  fontSize: 15,
-                  color: Color(0xFF075BD5)
+                  fontSize: 13.5,
+                  color: namePresentColor
                 ),
               ),
               Padding(
@@ -70,8 +71,8 @@ class ClientsListItem extends StatelessWidget {
                       children: [
                         const Icon(
                           Icons.work,
-                          color: Color(0xFF707070),
-                          size: 20,
+                          color: infosColor1,
+                          size: 18,
                         ),
                         const SizedBox(
                           width: 10,
@@ -79,22 +80,22 @@ class ClientsListItem extends StatelessWidget {
                         Text(
                           job,
                           style: const TextStyle(
-                            color: Color(0xFF707070),
+                            color: infosColor1,
                             fontSize: 11,
                             fontFamily: 'Poppins Light'
                           )
                         )
                       ],
                     ),
-                    const SizedBox(
-                      height: 3,
-                    ),
+                    // const SizedBox(
+                    //   height: 2,
+                    // ),
                     Row(
                       children: [
                         const Icon(
                           Icons.phone,
-                          color: Color(0xFF707070),
-                          size: 20,
+                          color: infosColor1,
+                          size: 18,
                         ),
                         const SizedBox(
                           width: 10,
@@ -102,22 +103,22 @@ class ClientsListItem extends StatelessWidget {
                         Text(
                             phoneNumber,
                             style: const TextStyle(
-                                color: Color(0xFF707070),
+                                color: infosColor1,
                                 fontSize: 11,
                                 fontFamily: 'Poppins Light'
                             )
                         )
                       ],
                     ),
-                    const SizedBox(
-                      height: 3,
-                    ),
+                    // const SizedBox(
+                    //   height: 2,
+                    // ),
                     Row(
                       children: [
                         const Icon(
                           Icons.place,
-                          color: Color(0xFF707070),
-                          size: 20,
+                          color: infosColor1,
+                          size: 18,
                         ),
                         const SizedBox(
                           width: 10,
@@ -125,7 +126,7 @@ class ClientsListItem extends StatelessWidget {
                         Text(
                           address,
                           style: const TextStyle(
-                              color: Color(0xFF707070),
+                              color: infosColor1,
                               fontSize: 11,
                               fontFamily: 'Poppins Light'
                           )
