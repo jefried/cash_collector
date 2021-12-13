@@ -22,8 +22,6 @@ class ClientPresentCardHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    print(onPress);
-
     return InkWell(
       onTap: onPress,
       child: Container(

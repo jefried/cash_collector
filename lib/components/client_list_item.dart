@@ -20,8 +20,10 @@ class ClientsListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+    double screenWidth = MediaQuery.of(context).size.width;
+
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       width: double.infinity,
       height: 108,
@@ -37,17 +39,24 @@ class ClientsListItem extends StatelessWidget {
         ]
       ),
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            height: 60,
-            width: 60,
+            height: 80,
+            width: 80,
             decoration: BoxDecoration(
-              shape: BoxShape.circle,
+              borderRadius: BorderRadius.circular(15),
               image: DecorationImage(
                 image: AssetImage(imagePath),
-                fit: BoxFit.fill
-              )
+                fit: BoxFit.cover
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: shadowColor2.withOpacity(.29),
+                  offset: const Offset(0, 3),
+                  blurRadius: 22
+                )
+              ]
             ),
           ),
           const SizedBox(width: 15,),
@@ -56,85 +65,91 @@ class ClientsListItem extends StatelessWidget {
             children: [
               Text(
                 name,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
                   fontFamily: 'Poppins Medium',
                   fontSize: 13.5,
-                  color: namePresentColor
+                  color: colorText1
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 10, top: 5),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        const Icon(
-                          Icons.work,
-                          color: infosColor1,
-                          size: 18,
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          job,
-                          style: const TextStyle(
-                            color: infosColor1,
-                            fontSize: 11,
-                            fontFamily: 'Poppins Light'
-                          )
-                        )
-                      ],
+              Row(
+                children: [
+                  Icon(
+                    Icons.work,
+                    color: infosColor1,
+                    size: 18,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  SizedBox(
+                    width: screenWidth - 190,
+                    child: Text(
+                      job,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        color: infosColor1,
+                        fontSize: 11,
+                        fontFamily: 'Poppins Light'
+                      )
                     ),
-                    // const SizedBox(
-                    //   height: 2,
-                    // ),
-                    Row(
-                      children: [
-                        const Icon(
-                          Icons.phone,
-                          color: infosColor1,
-                          size: 18,
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                            phoneNumber,
-                            style: const TextStyle(
-                                color: infosColor1,
-                                fontSize: 11,
-                                fontFamily: 'Poppins Light'
-                            )
-                        )
-                      ],
-                    ),
-                    // const SizedBox(
-                    //   height: 2,
-                    // ),
-                    Row(
-                      children: [
-                        const Icon(
-                          Icons.place,
-                          color: infosColor1,
-                          size: 18,
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          address,
-                          style: const TextStyle(
-                              color: infosColor1,
-                              fontSize: 11,
-                              fontFamily: 'Poppins Light'
-                          )
-                        )
-                      ],
+                  )
+                ],
+              ),
+              // const SizedBox(
+              //   height: 2,
+              // ),
+              Row(
+                children: [
+                  const Icon(
+                    Icons.phone,
+                    color: infosColor1,
+                    size: 18,
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    phoneNumber,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                      color: infosColor1,
+                      fontSize: 11,
+                      fontFamily: 'Poppins Light'
                     )
-                  ],
-                ),
+                  )
+                ],
+              ),
+              // const SizedBox(
+              //   height: 2,
+              // ),
+              Row(
+                children: [
+                  const Icon(
+                    Icons.place,
+                    color: infosColor1,
+                    size: 18,
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  SizedBox(
+                    width: screenWidth - 190,
+                    child: Text(
+                      address,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        color: infosColor1,
+                        fontSize: 11,
+                        fontFamily: 'Poppins Light'
+                      )
+                    ),
+                  )
+                ],
               )
             ],
           ),

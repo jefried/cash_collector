@@ -111,7 +111,7 @@ class HomeDrawer extends StatelessWidget {
           horizontalTitleGap: 5,
           minLeadingWidth: 30,
           leading: const Icon(
-            CupertinoIcons.chat_bubble,
+            Icons.chat_bubble_outlined,
             color: Color(0xFF707070),
             size: 22,
           ),
@@ -153,38 +153,6 @@ class HomeDrawer extends StatelessWidget {
                 fontFamily: 'Poppins SemiBold',
                 fontSize: 14.5,
                 color: Color(0xFF242424)
-            ),
-          ),
-          onTap: () {}
-        ),
-        ListTile(
-          contentPadding: const EdgeInsets.only(left: 16, right: 16),
-          horizontalTitleGap: 5,
-          minLeadingWidth: 30,
-          leading: const Icon(
-            Icons.notifications,
-            color: Color(0xFF707070),
-            size: 22,
-          ),
-          title: Align(
-            alignment: Alignment.centerLeft,
-            child: Badge(
-              position: const BadgePosition(end: -16, bottom: 4),
-              badgeContent: Text(
-                '3',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 10
-                ),
-              ),
-              child: Text(
-                'Notifications',
-                style: TextStyle(
-                    fontFamily: 'Poppins SemiBold',
-                    fontSize: 14.5,
-                    color: Color(0xFF242424)
-                ),
-              ),
             ),
           ),
           onTap: () {}

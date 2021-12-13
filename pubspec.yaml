@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   intl: ^0.17.0
   badges: ^2.0.2
+  flutter_switch: ^0.3.2
   here_sdk:
     path: plugins/here_sdk
 

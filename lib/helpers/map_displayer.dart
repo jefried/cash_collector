@@ -98,10 +98,17 @@ class MapDisplayer {
     WidgetPin widgetPin = _hereMapController.pinWidget(
         Padding(
           padding: const EdgeInsets.only(bottom: 20, left: 20),
-          child: const Icon(
-            Icons.location_on,
-            size: 40,
-            color: namePresentColor,
+          child: Column(
+            children: [
+              Icon(
+                Icons.message,
+              ),
+              Icon(
+                Icons.location_on,
+                size: 40,
+                color: namePresentColor,
+              ),
+            ],
           ),
         ),
         geoCoordinates!

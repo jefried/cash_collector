@@ -97,7 +97,34 @@ class _HomeState extends State<Home> {
               onMapCreated: _onMapCreated,
             ),
             Positioned(
-              bottom: 230,
+              bottom: 320,
+              right: 20,
+              child: InkWell(
+                onTap: (){},
+                child: Container(
+                  width: 40,
+                  height: 40,
+                  decoration: const BoxDecoration(
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                            color: shadowColor1,
+                            offset: Offset(0, 3),
+                            blurRadius: 16
+                        )
+                      ],
+                      shape: BoxShape.circle
+                  ),
+                  child: Icon(
+                    Icons.gps_fixed_rounded,
+                    size: 30,
+                    color: colorText1,
+                  ),
+                ),
+              )
+            ),
+            Positioned(
+              bottom: 240,
               right: 20,
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),

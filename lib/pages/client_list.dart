@@ -204,6 +204,36 @@ class _ClientListState extends State<ClientList> {
           ],
         ),
       ),
+      floatingActionButton: MaterialButton(
+        onPressed: () {},
+        textColor: Colors.white,
+        child: Container(
+          width: 50,
+          height: 50,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                secondaryColor,
+                principalColor
+              ]
+            ),
+            shape: BoxShape.circle,
+            boxShadow: [
+              BoxShadow(
+                color: shadowColor2.withOpacity(0.52),
+                blurRadius: 16,
+                offset: const Offset(0, 3)
+              )
+            ]
+          ),
+
+          child: Icon(
+            Icons.add,
+            size: 30,
+          ),
+        ),
+        shape: CircleBorder(),
+      ),
     );
   }
 }
