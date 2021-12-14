@@ -1,3 +1,4 @@
+import 'package:cash_collector/components/appbar_content_with_back.dart';
 import 'package:cash_collector/components/client_list_item.dart';
 import 'package:cash_collector/helpers/colors.dart';
 import 'package:flutter/cupertino.dart';
@@ -52,47 +53,11 @@ class _ClientListState extends State<ClientList> {
     double screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(
-            Icons.keyboard_arrow_left,
-            color: principalColor,
-            size: 30,
-          ),
-          onPressed: () {},
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(57),
+        child: AppBarContentWithBack(
+          title: 'Clients',
         ),
-        backgroundColor: Colors.white,
-        centerTitle: true,
-        title: const Text(
-          'Clients',
-          style: TextStyle(
-              fontFamily: 'Poppins Regular',
-              fontSize: 18,
-              color: principalColor
-          ),
-        ),
-        actions: [
-          Container(
-            height: 36,
-            width: 36,
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              shape: BoxShape.circle,
-              boxShadow: [
-                BoxShadow(
-                  color: Color(0xFFBEBEBE),
-                  offset: Offset(0, 6),
-                  blurRadius: 16
-                )
-              ],
-            ),
-            child: const Icon(
-              Icons.map,
-              color: Color(0xFFBEBEBE),
-              size: 24,
-            ),
-          )
-        ],
       ),
       body: Container(
         decoration: const BoxDecoration(
@@ -122,26 +87,26 @@ class _ClientListState extends State<ClientList> {
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(23),
                             borderSide: const BorderSide(
-                              color: Color(0xFF707070),
+                              color: infosColor1,
                               width: 0.2
                             )
                           ),
                           prefixIcon: const Icon(
                             Icons.search,
-                            color: Color(0xFFE2E2FF),
+                            color: shadowColor1,
                             size: 24,
                           ),
                           hintText: 'Rechercher un client',
                           hintStyle: const TextStyle(
                             fontFamily: 'Poppins Light',
                             fontSize: 15,
-                            color: Color(0xFFE2E2FF)
+                            color: shadowColor1
                           ),
                         ),
                         style: const TextStyle(
                           fontFamily: 'Poppins Light',
                           fontSize: 15,
-                          color: Color(0xFF000000)
+                          color: shadowColor2
                         ),
                       ),
                     ),
@@ -152,7 +117,7 @@ class _ClientListState extends State<ClientList> {
                         child: Container(
                           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                           decoration: BoxDecoration(
-                              color: const Color(0xFF707070),
+                              color: infosColor1,
                               borderRadius: BorderRadius.circular(12)
                           ),
                           child: Row(

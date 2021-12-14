@@ -1,4 +1,5 @@
 import 'package:badges/badges.dart';
+import 'package:cash_collector/helpers/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -86,6 +87,81 @@ class HomeDrawer extends StatelessWidget {
               ),
             ]
           )
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 16, top: 10, bottom: 20, right: 0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Votre solde',
+                    style: TextStyle(
+                        fontFamily: 'Poppins Light',
+                        fontSize: 12,
+                        color: infosColor1
+                    ),
+                  ),
+                  SizedBox(
+                    width: 175 * scaleWidth,
+                    child: Text(
+                      'XAF 250 000 000',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                          fontFamily: 'Poppins SemiBold',
+                          fontSize: 17,
+                          color: principalColor
+                      ),
+                    ),
+                  ),
+                  Text(
+                    'Le 13 Dec 2021',
+                    style: TextStyle(
+                        fontFamily: 'Poppins Light',
+                        fontSize: 10,
+                        color: infosColor1
+                    ),
+                  ),
+                ],
+              ),
+              MaterialButton(
+                onPressed: (){},
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  height: 40,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    gradient: const LinearGradient(
+                      colors: [
+                        secondaryColor,
+                        principalColor
+                      ]
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: shadowColor2.withOpacity(0.29),
+                        offset: const Offset(0, 9),
+                        blurRadius: 16
+                      )
+                    ]
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Transférer',
+                      style: TextStyle(
+                        fontFamily: 'Poppins Light',
+                        fontSize: 10,
+                        color: Colors.white
+                      ),
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
         ListTile(
           contentPadding: const EdgeInsets.only(left: 16, right: 16),

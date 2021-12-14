@@ -40,7 +40,16 @@
             android:name="flutterEmbedding"
             android:value="2"
             />
+
        <meta-data android:name="com.here.sdk.access_key_id" android:value="VxUF0_dxM25V5LYvwl5GVQ"/>
        <meta-data android:name="com.here.sdk.access_key_secret" android:value="wupDM4srHplIdlujTRUymq74IbmRZO9hPb-XXW68RFWq8cDP3vtgorMaERXgUAp2YzlEWFhoyzQ3856CGsBJIA"/>
     </application>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+<!--    <uses-permission android:name="android.permission.READ_PHONE_STATE" android:maxSdkVersion="22" />-->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 </manifest>

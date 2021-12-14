@@ -52,26 +52,27 @@ class _AppBarContentState extends State<AppBarContent> {
       actions: [
         Column(
           children: [
-            SizedBox(
-              height: 28,
-              child: FlutterSwitch(
-                value: isToggleOn,
-                onToggle: (value) {
-                  setState(() {
-                    isToggleOn = value;
-                    if (value){
-                      timerKey.currentState?.initTimer();
-                    }
-                    else{
-                      timerKey.currentState?.stopTimer();
-                    }
-                  });
-                },
-                showOnOff: true,
-                // inactiveToggleColor: Colors.grey,
-                // activeToggleColor: const Color(0xFF35CC3F),
-                activeColor: const Color(0xFF0EAE18),
-              ),
+            FlutterSwitch(
+              height: 22,
+              width: 55,
+              padding: 3,
+              valueFontSize: 13,
+              value: isToggleOn,
+              onToggle: (value) {
+                setState(() {
+                  isToggleOn = value;
+                  if (value){
+                    timerKey.currentState?.initTimer();
+                  }
+                  else{
+                    timerKey.currentState?.stopTimer();
+                  }
+                });
+              },
+              showOnOff: true,
+              // inactiveToggleColor: Colors.grey,
+              // activeToggleColor: const Color(0xFF35CC3F),
+              activeColor: const Color(0xFF0EAE18),
             ),
             TimeCounter(
               key: timerKey,

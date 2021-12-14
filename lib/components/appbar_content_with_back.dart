@@ -52,6 +52,7 @@ class AppBarContentWithBackState extends State<AppBarContentWithBack> {
             SizedBox(
               height: 28,
               child: FlutterSwitch(
+                height: 30,
                 value: isToggleOn,
                 onToggle: (value) {
                   setState(() {
@@ -91,8 +92,8 @@ class AppBarContentWithBackState extends State<AppBarContentWithBack> {
           badgeContent: Text(
             '1',
             style: TextStyle(
-                color: Colors.white,
-                fontSize: 10
+              color: Colors.white,
+              fontSize: 10
             ),
           ),
         ),

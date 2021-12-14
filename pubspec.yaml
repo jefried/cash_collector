@@ -39,6 +39,9 @@ dependencies:
   flutter_switch: ^0.3.2
   here_sdk:
     path: plugins/here_sdk
+  bubble_box: ^0.5.1
+  speech_balloon: ^0.0.4
+  geolocator: 7.6.2
 
 dev_dependencies:
   flutter_test:
