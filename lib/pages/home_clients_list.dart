@@ -99,20 +99,23 @@ class HomeClientsList extends StatelessWidget {
           child: HomeDrawer()
       ),
       body: Container(
+        padding: EdgeInsets.only(top: 20),
         height: screenHeight,
         decoration: const BoxDecoration(
           color: backgroundColor1,
           borderRadius: BorderRadius.only(topLeft: Radius.circular(29), topRight: Radius.circular(29))
         ),
-        child: SingleChildScrollView(
-          child: Wrap(
-            children: clientsInfos.map(
-              (clientInfo) => ClientPresentItem(
-                imageUrl: 'assets/images/asset1.jpg',
-                address: clientInfo['adress']!,
-                name: clientInfo['name']!,
-              )
-            ).toList(),
+        child: Center(
+          child: SingleChildScrollView(
+            child: Wrap(
+              children: clientsInfos.map(
+                (clientInfo) => ClientPresentItem(
+                  imageUrl: 'assets/images/asset1.jpg',
+                  address: clientInfo['adress']!,
+                  name: clientInfo['name']!,
+                )
+              ).toList(),
+            ),
           ),
         )
       ),

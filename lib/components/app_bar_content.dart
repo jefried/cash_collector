@@ -1,4 +1,5 @@
 import 'package:badges/badges.dart';
+import 'package:cash_collector/components/switch_activity_state.dart';
 import 'package:cash_collector/components/time_counter.dart';
 import 'package:cash_collector/helpers/colors.dart';
 import 'package:flutter/cupertino.dart';
@@ -19,9 +20,6 @@ class AppBarContent extends StatefulWidget {
 }
 
 class _AppBarContentState extends State<AppBarContent> {
-
-  bool isToggleOn = false;
-  GlobalKey<TimeCounterState> timerKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -50,35 +48,7 @@ class _AppBarContentState extends State<AppBarContent> {
         ],
       ),
       actions: [
-        Column(
-          children: [
-            FlutterSwitch(
-              height: 22,
-              width: 55,
-              padding: 3,
-              valueFontSize: 13,
-              value: isToggleOn,
-              onToggle: (value) {
-                setState(() {
-                  isToggleOn = value;
-                  if (value){
-                    timerKey.currentState?.initTimer();
-                  }
-                  else{
-                    timerKey.currentState?.stopTimer();
-                  }
-                });
-              },
-              showOnOff: true,
-              // inactiveToggleColor: Colors.grey,
-              // activeToggleColor: const Color(0xFF35CC3F),
-              activeColor: const Color(0xFF0EAE18),
-            ),
-            TimeCounter(
-              key: timerKey,
-            )
-          ],
-        ),
+        const SwitchActivityState(),
         Badge(
           child: IconButton(
               onPressed: () {},

@@ -1,7 +1,7 @@
+import 'package:cash_collector/helpers/colors.dart';
 import 'package:cash_collector/helpers/utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 
 class HistoryTransaction extends StatelessWidget {
@@ -66,7 +66,7 @@ class HistoryTransaction extends StatelessWidget {
                     style: const TextStyle(
                       fontFamily: 'Poppins Regular',
                       fontSize: 12,
-                      color: Color(0xFF4A4352)
+                      color: infosColor1
                     ),
                   ),
                   Text(
@@ -74,7 +74,7 @@ class HistoryTransaction extends StatelessWidget {
                     style: const TextStyle(
                       fontFamily: 'Poppins Light',
                       fontSize: 16,
-                      color: Color(0xFF332E38)
+                      color: colorText1
                     ),
                   ),
                   Text(
@@ -82,7 +82,7 @@ class HistoryTransaction extends StatelessWidget {
                     style: TextStyle(
                       fontFamily: 'Poppins Regular',
                       fontSize: 11,
-                      color: const Color(0xFF4A4352).withOpacity(0.5)
+                      color: colorText1.withOpacity(0.5)
                     ),
                   ),
                 ],

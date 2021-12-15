@@ -41,12 +41,12 @@ class MapDisplayer {
     ).toList();
     geoCoordinateList.add(_currentCoordinate);
     _hereMapController.pinWidget(
-        const Icon(
-          Icons.gps_fixed_rounded,
-          size: 40,
-          color: colorText1,
-        ),
-        _currentCoordinate,
+      const Icon(
+        Icons.mode_standby_sharp,
+        size: 30,
+        color: namePresentColor,
+      ),
+      _currentCoordinate,
     )!;
     GeoBox target = GeoBox.containingGeoCoordinates(geoCoordinateList)!;
     _camera.lookAtAreaWithGeoOrientation(target, GeoOrientationUpdate(20, 0));
@@ -100,7 +100,7 @@ class MapDisplayer {
     // Show route as polyline.
     GeoPolyline routeGeoPolyline = GeoPolyline(route.polyline);
 
-    double widthInPixels = 15;
+    double widthInPixels = 5;
     MapPolyline routeMapPolyline = MapPolyline(routeGeoPolyline, widthInPixels, namePresentColor);
 
     _hereMapController.mapScene.addMapPolyline(routeMapPolyline);

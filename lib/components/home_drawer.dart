@@ -127,27 +127,31 @@ class HomeDrawer extends StatelessWidget {
                   ),
                 ],
               ),
-              MaterialButton(
-                onPressed: (){},
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  height: 40,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25),
-                    gradient: const LinearGradient(
-                      colors: [
-                        secondaryColor,
-                        principalColor
-                      ]
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                        color: shadowColor2.withOpacity(0.29),
-                        offset: const Offset(0, 9),
-                        blurRadius: 16
-                      )
+              Container(
+                // padding: const EdgeInsets.symmetric(horizontal: 20),
+                margin: const EdgeInsets.only(right: 10),
+                height: 40,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  gradient: const LinearGradient(
+                    colors: [
+                      secondaryColor,
+                      principalColor
                     ]
                   ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: shadowColor2.withOpacity(0.29),
+                      offset: const Offset(0, 9),
+                      blurRadius: 16
+                    )
+                  ]
+                ),
+                child: MaterialButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25)
+                  ),
+                  onPressed: (){},
                   child: Center(
                     child: Text(
                       'Transférer',

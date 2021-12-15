@@ -23,7 +23,7 @@ class ClientPresentItem extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          width: screenWidth/2 - 20,
+          width: screenWidth/2 - 25,
           // height: 220,
           margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(
@@ -71,7 +71,7 @@ class ClientPresentItem extends StatelessWidget {
                       color: infosColor1,
                     ),
                     SizedBox(
-                      width: screenWidth / 2 - 62,
+                      width: screenWidth / 2 - 67,
                       child: Text(
                         address,
                         maxLines: 1,

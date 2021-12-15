@@ -1,5 +1,6 @@
 
 import 'package:badges/badges.dart';
+import 'package:cash_collector/components/end_day.dart';
 import 'package:cash_collector/helpers/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -107,7 +108,12 @@ class ClientPresentCardHome extends StatelessWidget {
                   )
               ),
               child: MaterialButton(
-                onPressed: () {},
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(14)
+                ),
+                onPressed: () {
+
+                },
                 child: const Text(
                   'Encaisser',
                   style: TextStyle(
